@@ -17,4 +17,5 @@ urxvt*background: black
 *color13: #AD7FA8
 *color14: #fcaf3e
 *color15: #EEEEEC
-URxvt.font: xft:inconsolata:size=12:antialias=true
+URxvt.font: xft:Terminus:size=12,xft:Fixed:antialias=true
+#URxvt.font: xft:inconsolata:size=12:antialias=true
