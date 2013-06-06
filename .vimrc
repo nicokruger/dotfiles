@@ -4,12 +4,13 @@ set copyindent
 set preserveindent
 set shiftround
 set history=700
-set wildmode=list:longest
 set wildmenu
-set wildignore=*.o,node_modules/*,*.swp,*.class
+set wildmode=full
+set wildignore+=*.o,**/node_modules/**,*.swp,*.class
 set ignorecase
 set incsearch
 set showmatch
+set path=$PWD/**
 set noerrorbells
 set novisualbell
 syntax enable
