@@ -30,7 +30,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 set nocompatible
-set timeoutlen=100
+"set timeoutlen=100
 set showcmd
 set hlsearch
 set nohidden
@@ -43,3 +43,4 @@ set scrolloff=5
 set sidescrolloff=5
 set history=500
 
+set paste

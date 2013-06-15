@@ -1,5 +1,6 @@
 urxvt*foreground: #ffd7af
-urxvt*background: #262626
+urxvt*background: #202022
+#urxvt*background: #262626
 
 *color0:  #2E3436
 *color1:  #a40000
