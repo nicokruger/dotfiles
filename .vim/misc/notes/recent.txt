@@ -1,0 +1,1 @@
+/home/nicok/.vim/misc/notes/user/s" : {  }, "star

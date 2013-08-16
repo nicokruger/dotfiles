@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/nicok/frootnip/frootball/toplevel'
+let g:netrw_dirhist_2='/home/nicok/frootnip/frootball/tutorial/Next'
+let g:netrw_dirhist_3='/home/nicok/frootnip/frootball/tutorial/Next/Next'
+let g:netrw_dirhist_4='/home/nicok/frootnip/frootball/tutorial/Next/Next/Next'
+let g:netrw_dirhist_5='/home/nicok/frootnip/frootballai'
+let g:netrw_dirhist_6='/home/nicok/frootnip/frootball/integration/mxit'
