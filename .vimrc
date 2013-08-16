@@ -6,7 +6,7 @@ set shiftround
 set history=700
 set wildmenu
 set wildmode=full
-set wildignore+=*.o,**/node_modules/**,*.swp,*.class
+set wildignore+=integration/mxit/frootball/awesome/*,*.png,*generated*,**/generated/**,*.o,**/node_modules/**,*.swp,*.class
 set ignorecase
 set incsearch
 set showmatch
@@ -14,14 +14,16 @@ set path=$PWD/**
 set noerrorbells
 set novisualbell
 syntax enable
+"not supposed to be neccesary if terminfo is correct
+"set t_Co=256
 colorscheme gruvbox
 set nobackup
 set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set ai
-set si
+let g:js_indent_log = 1
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 " smart way to move between windows
 map <C-j> <C-W>j
@@ -44,3 +46,9 @@ set sidescrolloff=5
 set history=500
 
 set paste
+set ai
+set si
+
+execute pathogen#infect()
+
+
