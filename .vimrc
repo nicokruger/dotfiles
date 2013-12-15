@@ -6,7 +6,7 @@ set shiftround
 set history=700
 set wildmenu
 set wildmode=full
-set wildignore+=integration/mxit/frootball/awesome/*,*.png,*generated*,**/generated/**,*.o,**/node_modules/**,*.swp,*.class
+set wildignore+=**/.git/**,integration/mxit/frootball/awesome/*,*.png,*generated*,**/generated/**,*.o,**/node_modules/**,*.swp,*.class
 set ignorecase
 set incsearch
 set showmatch
@@ -49,6 +49,24 @@ set paste
 set ai
 set si
 
+set relativenumber
+set number
+
+set scrolloff=15
+
 execute pathogen#infect()
 
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" the command for this is "Ag" - opens search results in quickfix window
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
