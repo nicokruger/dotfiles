@@ -4,7 +4,7 @@ echo "Wall is: ${WALL}"
 #TMP="$(mktemp).png"
 #convert $WALL $TMP
 
-TMP=$(/home/nicok/play/walle/a.py $WALL)
+TMP=$(/home/nicok/play/walle/walle.py $WALL)
 
 i3lock -t -u -i "$TMP"
 
