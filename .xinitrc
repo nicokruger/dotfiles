@@ -13,4 +13,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+
+xautolock -time 5 -locker /home/nicok/play/dotfiles/locker.sh &
 exec i3
