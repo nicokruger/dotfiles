@@ -46,7 +46,7 @@ plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/opt/android-sdk/platform-tools/:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/nicok/stuff/thrift-0.9.0/compiler/cpp
+export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/nicok/stuff/thrift-0.9.0/compiler/cpp
 
 alias vi="vim"
 alias ls="ls --color=always"
@@ -59,3 +59,5 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:manuals.*' insert-sections true
 zstyle ':completion:*:man:*' menu yes select
+
+export MAVEN_HOME=/opt/maven
