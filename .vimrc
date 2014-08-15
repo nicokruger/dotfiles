@@ -49,7 +49,6 @@ set paste
 set ai
 set si
 
-set relativenumber
 set number
 
 set scrolloff=15
