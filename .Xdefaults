@@ -1,6 +1,5 @@
 urxvt*foreground: #ffd7af
 urxvt*background: #202022
-#urxvt*background: #262626
 
 *color0:  #2E3436
 *color1:  #a40000
@@ -21,11 +20,9 @@ urxvt*background: #202022
 
 
 URxvt.font: xft:Terminus:size=12,xft:Fixed:antialias=true
-#URxvt.font: xft:inconsolata:size=12:antialias=true
 
-# bunch of shit from urxvt-perls
 URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
-URxvt.url-select.launcher:  chromium
+URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
@@ -33,5 +30,4 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-# disable scrollbar
 URxvt.scrollBar:    false
