@@ -6,17 +6,17 @@ set shiftround
 set history=700
 set wildmenu
 set wildmode=full
-set wildignore+=**/.git/**,integration/mxit/frootball/awesome/*,*.png,*generated*,**/generated/**,*.o,**/node_modules/**,*.swp,*.class
+set wildignore+=**/.git/**,integration/mxit/frootball/awesome/*,*.png,*generated*,**/generated/**,*.o,**/node_modules/**,*.swp,*.class,**/bower/**
 set ignorecase
 set incsearch
 set showmatch
 set path=$PWD/**
+"set path+=**
 set noerrorbells
 set novisualbell
 syntax enable
 "not supposed to be neccesary if terminfo is correct
 "set t_Co=256
-colorscheme gruvbox
 set nobackup
 set expandtab
 set smarttab
@@ -54,6 +54,7 @@ set number
 set scrolloff=15
 
 execute pathogen#infect()
+colorscheme gruvbox
 
 " The Silver Searcher
 if executable('ag')
@@ -69,3 +70,9 @@ endif
 
 " the command for this is "Ag" - opens search results in quickfix window
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+" ctrl-s
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>l
+vnoremap <c-s> <Esc>:w<CR>
+
