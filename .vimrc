@@ -20,8 +20,8 @@ syntax enable
 set nobackup
 set expandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 let g:js_indent_log = 1
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
@@ -53,7 +53,6 @@ set number
 
 set scrolloff=15
 
-execute pathogen#infect()
 colorscheme gruvbox
 
 " The Silver Searcher
@@ -76,5 +75,71 @@ nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>l
 vnoremap <c-s> <Esc>:w<CR>
 
+
 " ctags
 command! MakeTags !ctags -R .
+
+" show tabs
+set listchars=tab:>-
+set list
+
+" stupd syntax highlighting
+"map <c-s> :syntax sync fromstart<CR>
+
+".vimrc
+map <c-s> :call JsBeautify()<cr>
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+
+set et
+set tabstop=2
+set shiftwidth=2
+
+nnoremap gp :silent %!prettier --stdin --trailing-comma all --single-quote<CR>
+" trailing stuff
+match ErrorMsg '\%>120v.\+'
+match ErrorMsg '\s\+$'
+
+nnoremap - :Explore<CR>
+
+let g:netrw_altv          = 1
+let g:netrw_fastbrowse    = 2
+let g:netrw_keepdir       = 0
+"let g:netrw_liststyle     = 2
+"let g:netrw_retmap        = 1
+let g:netrw_silent        = 1
+"let g:netrw_special_syntax= 1
+let g:netrw_banner=0
+autocmd FileType vue syntax sync fromstart
+"let g:vue_disable_pre_processors=1
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.pug
+execute pathogen#infect()
+
+
+
+
+
+
+
+call plug#begin()
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'leafgarland/typescript-vim'
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+"    \ 'javascript': ['javascript-typescript-stdio'],
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'javascript': ['tcp://127.0.0.1:2089'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+"nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_completion()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
