@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/nicok/play/chef/starter-kit/chef-repo/cookbooks/vaitom'
-let g:netrw_dirhist_2='/Users/nicok/play/chef/starter-kit/chef-repo/cookbooks/vaitom/resources'
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/nicok/frootnip/playboxcade/api/lambda'
+let g:netrw_dirhist_6='/Users/nicok/frootnip/playboxcade/api'
+let g:netrw_dirhist_5='/Users/nicok/frootnip/playboxcade/webapp/src/ui/organisms'
+let g:netrw_dirhist_4='/Users/nicok/frootnip/playboxcade/webapp/src/ui'
+let g:netrw_dirhist_3='/Users/nicok/frootnip/playboxcade/webapp/src/ui/pages'
+let g:netrw_dirhist_2='/Users/nicok/frootnip/playboxcade/webapp/src/router'
+let g:netrw_dirhist_1='/Users/nicok/frootnip/playboxcade/webapp/src'
+let g:netrw_dirhist_0='/Users/nicok/frootnip/playboxcade/webapp/src/ui/pages'
+let g:netrw_dirhist_9='/Users/nicok/frootnip/playboxcade/webapp/src/ui'
+let g:netrw_dirhist_8='/Users/nicok/frootnip/playboxcade/webapp/src/ui/organisms'
